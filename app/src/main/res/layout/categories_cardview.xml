@@ -1,0 +1,37 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="70dp"
+    android:layout_height="100dp"
+    android:id="@+id/card_view"
+    android:layout_margin="9dp"
+    android:elevation="8dp"
+    app:cardBackgroundColor="@color/white"
+    android:background="@drawable/categories_background"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="35dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivCategoriesPizza"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/cat_1" />
+
+        <TextView
+            android:id="@+id/tvCategoriesPizza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivCategoriesPizza"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text="Pizza"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

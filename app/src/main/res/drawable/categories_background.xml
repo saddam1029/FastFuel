@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#ffffff" />
+    <corners android:radius="1000dp" /> <!-- Use a large value for the radius to make it appear oval -->
+    <size android:width="120dp" android:height="160dp" /> <!-- Adjust the width and height as per your requirement -->
+</shape>
