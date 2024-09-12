@@ -1,6 +1,8 @@
 package com.example.fastFuel;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -29,6 +31,13 @@ public class AddToCart extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_to_cart);
+
+        WindowInsetsControllerCompat insetsController = new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.app_background));
+        getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.app_background));
+        insetsController.setAppearanceLightStatusBars(true);
+        insetsController.setAppearanceLightNavigationBars(true);
+
 
         // Initialize views
         initializeViews();
@@ -61,10 +70,11 @@ public class AddToCart extends AppCompatActivity {
         btnCancel = findViewById(R.id.btCancel);
         btnConfirm = findViewById(R.id.btConform);
         ivBigFoodPic = findViewById(R.id.ivFood);
-        tvFoodName = findViewById(R.id.tvFoodName);
+        tvFoodName = findViewById(R.id.tvName);
         tvFoodPrice = findViewById(R.id.tvFoodPrice);
         tvSubtotalPrice = findViewById(R.id.tvSubPrice);
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
+
     }
 
     // Set data to the views

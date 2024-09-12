@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.example.FastFuel.R;
 
@@ -30,6 +32,12 @@ public class FoodDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_detail);
+
+        WindowInsetsControllerCompat insetsController = new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.app_background));
+        getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.app_background));
+        insetsController.setAppearanceLightStatusBars(true);
+        insetsController.setAppearanceLightNavigationBars(true);
 
         // Retrieve the passed data from MainActivity
         String foodName = getIntent().getStringExtra("foodName");

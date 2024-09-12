@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import com.example.FastFuel.R;
 
@@ -18,6 +20,12 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+        WindowInsetsControllerCompat insetsController = new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.app_background));
+        getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.app_background));
+        insetsController.setAppearanceLightStatusBars(true);
+        insetsController.setAppearanceLightNavigationBars(true);
 
         // Using a Handler to delay the intent for the specified time
         delayAndStartMainActivity();

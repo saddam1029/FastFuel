@@ -1,6 +1,8 @@
 package com.example.fastFuel;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
@@ -21,6 +23,12 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        WindowInsetsControllerCompat insetsController = new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.app_background));
+        getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.app_background));
+        insetsController.setAppearanceLightStatusBars(true);
+        insetsController.setAppearanceLightNavigationBars(true);
 
         // Code Restructuring: Extracted method for setting up profile click listener
         setupProfileClickListener();

@@ -4,5 +4,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="app_color">#FEB41D</color> <!-- Add this line for purple -->
+    <color name="app_background">#E4E4E4</color> <!-- Add this line for purple -->
 
 </resources>

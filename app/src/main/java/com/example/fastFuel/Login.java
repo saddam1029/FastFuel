@@ -1,6 +1,8 @@
 package com.example.fastFuel;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +26,12 @@ public class Login extends AppCompatActivity {
         Button button = findViewById(R.id.btSighIn);
         email = findViewById(R.id.etEmail);
         password = findViewById(R.id.etPassword);
+
+        WindowInsetsControllerCompat insetsController = new WindowInsetsControllerCompat(getWindow(), getWindow().getDecorView());
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.app_background));
+        getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.app_background));
+        insetsController.setAppearanceLightStatusBars(true);
+        insetsController.setAppearanceLightNavigationBars(true);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
